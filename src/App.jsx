@@ -4,16 +4,17 @@ import Shop from './pages/Shop'
 import ProductDetails from './pages/ProductDetails'
 import Cart from './pages/Cart'
 import './App.css'
-import {createBrowserRouter, RouterProvider} from 'react-router-dom'
+import { createHashRouter, RouterProvider } from 'react-router-dom'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
-    element:<Layout/>, children:[
-      {path:"/", element:<Home/>},
-      {path:"/shop", element:<Shop/>},
-      {path:"/cart", element:<Cart/>},
-      {path:"/product/:id", element:<ProductDetails/>}
+    element: <Layout />,
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "/shop", element: <Shop /> },
+      { path: "/cart", element: <Cart /> },
+      { path: "/product/:id", element: <ProductDetails /> }
     ]
   },
 ]);
